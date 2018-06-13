@@ -1,0 +1,69 @@
+1、安装nodejs
+cnpm -v
+
+2、cnpm安装
+cnpm install -g cnpm -registry=https://registry.npm.taobao.org
+
+3、安装TypeScript
+cnpm install -g typescript typings
+
+4、安装 AngularJS CLI
+cnpm install -g @angular/cli
+cnpm uninstall -g @angular/cli
+
+5、集成webpack：
+cnpm install webpack --save
+-save-dev是指将包信息添加到devDependencies，表示你发布时依赖的包裹 比如webpack。
+
+-save是指将包信息添加到dependencies，表示你开发时候依赖的
+
+
+6、---集成node-saas---
+SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
+cnpm install -g node-sass
+
+7、---集成bootstrap---
+cnpm install jquery --save
+cnpm install  propper --save
+cnpm install bootstrap --save
+
+cnpm install --save @types/bootstrap
+cnpm install --save @types/jquery
+
+
+8、---集成echarts---
+
+
+轮播图
+
+
+
+附录：
+设置镜像：
+npm太慢， 淘宝npm镜像使用方法
+1.临时使用
+npm --registry https://registry.npm.taobao.org install express
+2.持久使用
+npm config set registry https://registry.npm.taobao.org
+配置后可通过下面方式来验证是否成功 
+npm config get registry
+
+
+
+9、新建项目
+ng  new  projectName
+
+10、新建组件
+ng g component comName
+ng g service   sName
+ng g interface iName
+
+11、启动
+ng serve --port 8888
+
+
+
+
+
+
+

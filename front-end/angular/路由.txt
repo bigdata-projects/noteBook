@@ -1,0 +1,29 @@
+ng new testset --routing
+
+Routes：
+路由配置
+
+RouterOutlet：
+路由内容呈现位置的占位符指令
+
+导航：(路由转换)
+控制器中使用
+Router:
+HTML中使用
+RouterLink:
+
+
+ActivitedRoute:
+当前激活的对象
+
+Routes
+存在模块中：
+
+路由时传递数据：
+1查询参数
+/product?id=1&name=zzh => ActivitedRoute.queryParam[id]
+2路径参数
+{/product/:id} 
+ActivitedRoute.params[id]
+3路由配置中传递数据
+
