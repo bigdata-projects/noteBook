@@ -1,9 +1,0 @@
-angular.json 项目配置文件
-
-启动脚本：
-main: main.ts
-首页：
-index: index.html
-styles:
-
-scripts:

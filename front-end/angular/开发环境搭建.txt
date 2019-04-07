@@ -1,8 +1,8 @@
 1、安装nodejs
-cnpm -v
+npm -v
 
 2、cnpm安装
-cnpm install -g cnpm -registry=https://registry.npm.taobao.org
+npm install -g cnpm -registry=https://registry.npm.taobao.org
 
 3、安装TypeScript
 cnpm install -g typescript typings
@@ -22,15 +22,18 @@ cnpm install webpack --save
 SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
 cnpm install -g node-sass
 
-7、---集成bootstrap---
+7、---集成bootstrap &Jquery---
 cnpm install jquery --save
 cnpm install  propper --save
-cnpm install bootstrap --save
 
-cnpm install --save @types/bootstrap
 cnpm install --save @types/jquery
 
-
+修改angular.json
+  "styles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "src/styles.css"
+  ],
+  
 8、---集成echarts---
 
 
@@ -51,16 +54,35 @@ npm config get registry
 
 
 9、新建项目
-ng  new  projectName
+ng  new  projectName --routing
 
 10、新建组件
-ng g component comName
+ng g component comName   --module=modName
 ng g service   sName
 ng g interface iName
 
 11、启动
 ng serve --port 8888
 
+跨域访问：
+浏览器对于javascript的同源策略的限制,例如a.cn下面的js不能调用b.cn中的js,对象或数据(因为a.cn和b.cn是不同域),所以跨域就出现了：
+简单的解释就是相同域名,端口相同,协议相同
+解决方案：
+反向代理
+1、创建：proxy.config.json文件
+{
+"/api":{
+"target":"http://106.15.179.92"
+}
+
+2、配置”package.json 文件
+"scripts": {
+"ng": "ng",
+"start": "ng serve --proxy-config proxy.config.json",
+"build": "ng build --prod --aot",
+"test": "ng test",
+"lint": "ng lint",
+"e2e": "ng e2e"
 
 
 

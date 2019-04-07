@@ -1,0 +1,14 @@
+1、 npm ERR! code EINTEGRITY npm ERR! sha1-
+报错日志
+npm ERR! code EINTEGRITY
+npm ERR! sha1-OGchPo3Xm/Ho8jAMDPwe+xgsDfE= integrity checksum failed when using sha1: wanted sha1-OGchPo3Xm/Ho8jAMDPwe+xgsDfE= but got sha1-gNVXCrjQagTW0VaF+kYHiU1O0Iw=. (33078 bytes)
+
+1清除缓存 尝试失败
+npm cache verify
+2.把npm版本降级为4系最新版本，解决
+npm cache clean
+npm cache clean --force
+grep -ir "sha1-xxxxxxxxxxxxxxxx" ~/.npm
+
+实在不行就一条一条执行试试，看那个能帮到你
+
